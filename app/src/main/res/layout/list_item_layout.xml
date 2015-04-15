@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.redux.kumardivyarajat.parsedemo.Main2Activity"
+    android:background="#8003cbff">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/name"
+        android:textColor="#80000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/usn"
+        android:textSize="35sp"
+        android:textColor="#9bffa068"
+        android:textStyle="bold|italic"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_alignRight="@+id/checkBox"
+        android:layout_alignEnd="@+id/checkBox" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/semester"
+        android:textSize="15sp"
+        android:textColor="#c8ff653a"
+        android:layout_below="@+id/name"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageView"
+        android:layout_below="@+id/semester"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="42dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Absent"
+        android:id="@+id/checkBox"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_above="@+id/usn"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="42dp"
+        android:layout_marginEnd="42dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Semester-"
+        android:id="@+id/textView"
+        android:layout_below="@+id/name"
+        android:layout_toLeftOf="@+id/semester"
+        android:layout_toStartOf="@+id/semester"
+        android:textSize="15sp" />
+</RelativeLayout>
