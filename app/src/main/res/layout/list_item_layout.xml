@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.redux.kumardivyarajat.parsedemo.Main2Activity"
-    android:background="#8003cbff">
+    android:background="#ff97ff5d">
 
 
     <TextView
@@ -13,6 +13,7 @@
         android:textColor="#80000000"
         android:textSize="25sp"
         android:textStyle="bold"
+        android:layout_marginLeft="10dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -25,9 +26,11 @@
         android:textSize="35sp"
         android:textColor="#9bffa068"
         android:textStyle="bold|italic"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_alignRight="@+id/checkBox"
-        android:layout_alignEnd="@+id/checkBox" />
+        android:layout_below="@+id/toggleButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="44dp"
+        android:layout_marginEnd="44dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -37,38 +40,41 @@
         android:textSize="15sp"
         android:textColor="#c8ff653a"
         android:layout_below="@+id/name"
-        android:layout_toRightOf="@+id/imageView"
-        android:layout_toEndOf="@+id/imageView" />
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_marginTop="80dp" />
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+    <com.parse.ParseImageView
         android:id="@+id/imageView"
-        android:layout_below="@+id/semester"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="42dp" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Absent"
-        android:id="@+id/checkBox"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:layout_above="@+id/usn"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="42dp"
-        android:layout_marginEnd="42dp" />
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:padding="30dp"
+        android:layout_below="@+id/usn"
+        android:layout_toLeftOf="@+id/usn"
+        android:layout_toStartOf="@+id/usn" />
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Semester-"
         android:id="@+id/textView"
-        android:layout_below="@+id/name"
-        android:layout_toLeftOf="@+id/semester"
-        android:layout_toStartOf="@+id/semester"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        android:layout_alignBottom="@+id/semester"
+        android:layout_alignLeft="@+id/toggleButton"
+        android:layout_alignStart="@+id/toggleButton" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attendance"
+        android:textOff="Present"
+        android:textOn="Absent"
+        android:id="@+id/toggleButton"
+        android:textSize="25sp"
+        android:layout_alignTop="@+id/name"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>

@@ -6,8 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.parse.ParseFile;
+import com.parse.ParseImageView;
 
 import java.util.List;
 
@@ -48,7 +50,7 @@ public class CustomAdapter extends BaseAdapter{
         //ImageView imageView ;
         TextView name  ;
         TextView usn ;
-        ImageView imageView;
+        ParseImageView imageView;
         TextView semester  ;
     }
 
@@ -63,7 +65,7 @@ public class CustomAdapter extends BaseAdapter{
             holder.name = (TextView)v.findViewById(R.id.name);
             holder.usn = (TextView)v.findViewById(R.id.usn);
             holder.semester = (TextView)v.findViewById(R.id.semester);
-            holder.imageView = (ImageView)v.findViewById(R.id.imageView);
+            holder.imageView = (ParseImageView)v.findViewById(R.id.imageView);
             v.setTag(holder);
         } else {
             holder = (ViewHolder) v.getTag();
@@ -77,7 +79,13 @@ public class CustomAdapter extends BaseAdapter{
         holder.name.setText(s.getName());
         holder.usn.setText(s.getUSN());
         holder.semester.setText(s.getSemester());
-        holder.imageView.setImageBitmap(s.getPic());
+        ParseFile imageFile = s.getPic();
+        if(imageFile != null)
+        {
+            holder.imageView.setParseFile(imageFile);
+            holder.imageView.loadInBackground();
+        }
+       // holder.imageView.setImageBitmap(s.getPic());
 
         Log.d("CustomAdapter.class", "CustomAdapter");
 

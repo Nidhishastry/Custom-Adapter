@@ -1,6 +1,6 @@
 package com.redux.kumardivyarajat.parsedemo;
 
-import android.graphics.Bitmap;
+import com.parse.ParseFile;
 
 /**
  * Created by kumardivyarajat on 15/04/15.
@@ -8,13 +8,13 @@ import android.graphics.Bitmap;
 public class Students {
 
     String Name, USN, Semester;
-    Bitmap pic;
+               ParseFile pic;
 
     Students () {
 
     };
 
-    public Students(String name, Bitmap n, String semester, String USN) {
+    public Students(String name, ParseFile n, String semester, String USN) {
         Name = name;
         this.pic = n;
         Semester = semester;
@@ -30,11 +30,11 @@ public class Students {
         Name = name;
     }
 
-    public Bitmap getPic() {
+    public ParseFile getPic() {
         return pic;
     }
 
-    public void setPic(Bitmap pic) {
+    public void setPic(ParseFile pic) {
         this.pic = pic;
     }
 
